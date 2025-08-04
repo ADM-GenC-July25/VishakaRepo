@@ -6,16 +6,18 @@ phases:
   pre_build:
     commands:
       - echo In the pre_build phase...
+      - cd vite-project
       - npm install
   build:
     commands:
       - echo Build started on `date`
+      - cd vite-project
       - npm run build
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - "**/*"
-  base-directory: "build"
+    - '**/*'
+  base-directory: 'vite-project/dist'
   discard-paths: no
