@@ -6,14 +6,14 @@ phases:
   pre_build:
     commands:
       - echo In the pre_build phase...
-      - pwd
       - ls -la
       - cd "vite-project"
       - npm install
   build:
     commands:
       - echo Build started on `date`
-      - cd "vite-project"
+      - ls -la
+      # - cd "vite-project"
       - npm run build
   post_build:
     commands:
